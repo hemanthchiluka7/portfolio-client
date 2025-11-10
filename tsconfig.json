@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "lib": ["ESNext", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+
+    // ✅ Add these lines
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
+}
